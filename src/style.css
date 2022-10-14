@@ -50,6 +50,7 @@ nav {
   margin: 0 5px;
   padding: 2px 0;
   width: 100px;
+  background-color: #ffffff;
   color: #800080;
   border: 1px solid #800080;
   border-radius: 2px;
@@ -58,6 +59,8 @@ nav {
 }
 
 .menu-item--opened {
+  background-color: #800080;
+  color: #ffffff;
   font-weight: bold;
 }
 
@@ -85,6 +88,7 @@ nav {
 
 .submenu-item {
   padding: 5px;
+  color: #800080;
 }
 
 /****** MAIN ******/
