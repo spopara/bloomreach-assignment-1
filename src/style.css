@@ -99,8 +99,6 @@ main {
 /****** FOOTER ******/
 footer {
   height: 50px;
-  border-width: 5px;
-  border-style: dashed;
-  border-color: #ff0000;
-  background-color: #ffff00;
+  color: #800080;
+  border: 5px dashed #800080;
 }
