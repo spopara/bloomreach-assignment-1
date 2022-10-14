@@ -1,5 +1,7 @@
 /****** BASE ******/
-header {
+header,
+nav,
+.menu-item {
   box-sizing: border-box;
 }
 
@@ -23,4 +25,66 @@ header {
 header h1 {
   margin: auto;
   text-align: center;
+}
+
+/****** MENU ******/
+nav {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: #ff0000;
+}
+
+.menu,
+.submenu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+
+.menu-item {
+  position: relative;
+  margin: 0 5px;
+  padding: 2px 0;
+  width: 100px;
+  color: #800080;
+  border: 1px solid #800080;
+  border-radius: 2px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.menu-item--opened {
+  font-weight: bold;
+}
+
+.submenu {
+  position: absolute;
+  left: -1px;
+  top: 23px;
+  width: 100%;
+  max-height: 0;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #800080;
+  border-radius: 2px;
+  font-weight: normal;
+  overflow: hidden;
+  opacity: 0;
+  transition: all;
+  transition-duration: 300ms;
+}
+
+.menu-item--opened .submenu {
+  max-height: 150px;
+  opacity: 1;
+}
+
+.submenu-item {
+  padding: 5px;
 }

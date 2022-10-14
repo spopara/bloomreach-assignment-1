@@ -1,14 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Bloomreach Assignment 1</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
   </head>
   <body>
     <header class="dashed-border">
       <h1>Bloomreach Assignment 1</h1>
     </header>
+
+    <nav class="dashed-border">
+      <ul class="menu">
+        <li class="menu-item" onclick="openMenu(this)">
+          Home
+          <ul class="submenu">
+            <li class="submenu-item" onclick="openAlert(this, event)">Sub-menu 1</li>
+            <li class="submenu-item" onclick="openAlert(this, event)">Sub-menu 2</li>
+            <li class="submenu-item" onclick="openAlert(this, event)">Sub-menu 3</li>
+          </ul>
+        </li>
+        <li class="menu-item" onclick="openMenu(this)">
+          About Us
+          <ul class="submenu">
+            <li class="submenu-item" onclick="openAlert(this, event)">Sub-menu 4</li>
+            <li class="submenu-item" onclick="openAlert(this, event)">Sub-menu 5</li>
+            <li class="submenu-item" onclick="openAlert(this, event)">Sub-menu 6</li>
+          </ul>
+        </li>
+        <li class="menu-item" onclick="openMenu(this)">
+          Contact Us
+          <ul class="submenu">
+            <li class="submenu-item" onclick="openAlert(this, event)">Sub-menu 7</li>
+            <li class="submenu-item" onclick="openAlert(this, event)">Sub-menu 8</li>
+            <li class="submenu-item" onclick="openAlert(this, event)">Sub-menu 9</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <script>
+      function openMenu(menuItem) {
+        menuItem.classList.toggle("menu-item--opened");
+      }
+
+      function openAlert(subItem, event) {
+        event.stopPropagation();
+        window.alert(subItem.textContent);
+      }
+    </script>
   </body>
 </html>
