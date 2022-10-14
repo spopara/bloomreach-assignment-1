@@ -1,6 +1,8 @@
 /****** BASE ******/
 header,
 nav,
+main,
+footer,
 .menu-item {
   box-sizing: border-box;
 }
@@ -11,20 +13,16 @@ body {
   color: #808080;
 }
 
-.dashed-border {
-  border-width: 5px;
-  border-style: dashed;
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /****** HEADER ******/
 header {
   height: 50px;
   border-color: #808080;
-}
-
-header h1 {
-  margin: auto;
-  text-align: center;
 }
 
 /****** MENU ******/
@@ -87,4 +85,18 @@ nav {
 
 .submenu-item {
   padding: 5px;
+}
+
+/****** MAIN ******/
+main {
+  min-height: calc(100vh - 166px); /*compensate for header, menu, and footer height */
+}
+
+/****** FOOTER ******/
+footer {
+  height: 50px;
+  border-width: 5px;
+  border-style: dashed;
+  border-color: #ff0000;
+  background-color: #ffff00;
 }
