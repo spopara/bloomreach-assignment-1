@@ -1,0 +1,26 @@
+/****** BASE ******/
+header {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  color: #808080;
+}
+
+.dashed-border {
+  border-width: 5px;
+  border-style: dashed;
+}
+
+/****** HEADER ******/
+header {
+  height: 50px;
+  border-color: #808080;
+}
+
+header h1 {
+  margin: auto;
+  text-align: center;
+}
